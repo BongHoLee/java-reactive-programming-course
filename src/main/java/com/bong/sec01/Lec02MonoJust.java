@@ -12,5 +12,6 @@ public class Lec02MonoJust {
 
         // Publisher를 구독(Subscribe) 함으로써 비로소 데이터 발행과 연산이 시작된다.
         mono.subscribe(i -> System.out.println("Received : " + i));
+
     }
 }
