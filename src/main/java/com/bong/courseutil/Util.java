@@ -1,8 +1,11 @@
 package com.bong.courseutil;
 
+import com.github.javafaker.Faker;
 import java.util.function.Consumer;
 
 public class Util {
+
+    private static final Faker FAKER = Faker.instance();
 
     // onNext 시그널에 대한 행동을 하는 Consumer
     public static <T> Consumer<T> onNextConsumer() {
@@ -17,5 +20,9 @@ public class Util {
     // onComplete 시그널에 대한 행동을 하는 Consumer
     public static Runnable onCompleteConsumer() {
         return () -> System.out.println("Completed");
+    }
+
+    public static Faker faker() {
+        return FAKER;
     }
 }
