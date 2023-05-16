@@ -12,6 +12,10 @@ public class Util {
         return o -> System.out.println("Received : " + o);
     }
 
+    public static <T> Consumer<T> onNextConsumerWith(Object with) {
+        return o -> System.out.println("Received : " + o + "::: with " + with);
+    }
+
     // onError 시그널에 대한 행동을 하는 Consumer
     public static Consumer<Throwable> onErrorConsumer() {
         return err -> System.out.println("Error : " + err.getMessage());
